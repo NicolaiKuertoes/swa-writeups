@@ -14,3 +14,4 @@ Ein angreifer lädt das Obige Skript über den File-Upload hoch. Dieses wird aut
 Der Angreifer navigiert nun einfach über die URL in das <b><i>uploads</i></b> Verzeichnis und öffnet die erzeugte Datei, mit dem inhalt des "cat" commands.
 
 ### Fix
+Hier möchte ich zunächst

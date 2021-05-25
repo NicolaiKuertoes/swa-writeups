@@ -14,4 +14,5 @@ Ein angreifer lädt das Obige Skript über den File-Upload hoch. Dieses wird aut
 Der Angreifer navigiert nun einfach über die URL in das <b><i>uploads</i></b> Verzeichnis und öffnet die erzeugte Datei, mit dem inhalt des "cat" commands.
 
 ### Fix
-Hier möchte ich zunächst
+Hier möchte ich zunächst das <i>Directory Listing</i> verhindern. Dies lässt sich ganz einfach mit einer leeren index.html oder index.php Datei im gewünschten Verzeichnis umsetzen. Der Server hält nach besagten index-Dateien ausschau und zeigt diese automatisch an. Um den Zugang zum <b>uploads</b> Ordner garnicht erst zu ermöglichen, kann man auch eine automatische Weiterleitung programmieren.
+Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>

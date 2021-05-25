@@ -8,6 +8,7 @@ Navigiert man über die URL "https://example.com/uploads" in dieses Verzeichnis,
 Ein symbolischer exploit sähe wie folgt aus:
 ```PHP
 <?php
+  # executes the system command "cat" on the /etc/passwd file and redirects the output into a .txt file
   exec("cat /etc/passwd > reconnaissance.txt");
 ```
 

@@ -19,7 +19,7 @@ Hier möchte ich zunächst das <i>Directory Listing</i> verhindern. Dies lässt 
 Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
 ```PHP
 <?php
-  # /uploads/index.html
+  # /uploads/index.php
   header("Location: https://example.com/");
 ```
 Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.

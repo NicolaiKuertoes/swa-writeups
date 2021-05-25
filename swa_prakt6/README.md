@@ -25,3 +25,4 @@ Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
 ```
 Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.<br>
 ><i><b>Great success!</b></i>
+#### Prevent Arbitrary File-Upload

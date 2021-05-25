@@ -23,4 +23,5 @@ Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
   # /uploads/index.php
   header("Location: https://example.com/");
 ```
-Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.
+Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.<br>
+<i><b>Great success!</b></i>

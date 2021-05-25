@@ -10,7 +10,7 @@ Ein symbolischer exploit sähe wie folgt aus:
 <?php
   exec("cat /etc/passwd > reconnaissance.txt");
 ```
-Ein angreifer lädt das obige Skript über den File-Upload hoch. Dieses wird automatisch ausgeführt.
+Ein angreifer lädt das Obige Skript über den File-Upload hoch. Dieses wird automatisch ausgeführt.
 Der Angreifer navigiert nun einfach über die URL in das <b><i>uploads</i></b> Verzeichnis und öffnet die erzeugte Datei, mit dem inhalt des "cat" commands.
 
 ### Fix

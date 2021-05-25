@@ -8,6 +8,7 @@ Navigiert man über die URL "https://example.com/uploads" in dieses Verzeichnis,
 Ein symbolischer exploit sähe wie folgt aus:
 ```PHP
 <?php
+  # evil.php
   exec("cat /etc/passwd > reconnaissance.txt");
 ```
 Ein angreifer lädt das Obige Skript über den File-Upload hoch. Dieses wird automatisch ausgeführt.
@@ -15,4 +16,10 @@ Der Angreifer navigiert nun einfach über die URL in das <b><i>uploads</i></b> V
 
 ### Fix
 Hier möchte ich zunächst das <i>Directory Listing</i> verhindern. Dies lässt sich ganz einfach mit einer leeren index.html oder index.php Datei im gewünschten Verzeichnis umsetzen. Der Server hält nach besagten index-Dateien ausschau und zeigt diese automatisch an. Um den Zugang zum <b>uploads</b> Ordner garnicht erst zu ermöglichen, kann man auch eine automatische Weiterleitung programmieren.
-Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>
+Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
+```PHP
+<?php
+  # /uploads/index.html
+  header("Location: https://example.com/");
+```
+Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.

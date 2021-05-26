@@ -7,7 +7,7 @@ https://xss-game.appspot.com/level1/frame?query=<script>alert("HACKED")</script>
 
 ### Level 2
 ```
-<img src="asdf" onerror='alert("HACKED")' />
+<img src="asdf" onerror='alert("HACKED")'/>
 ```
 
 ### Level 3

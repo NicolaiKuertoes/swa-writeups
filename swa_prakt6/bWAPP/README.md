@@ -1,5 +1,5 @@
 # bWAPP - Exploits
-
+<a href="https://github.com/NicolaiKuertoes/swa-writeups/tree/master/swa_prakt6#swa---praktikum-6">&larr; zurück</a>
 ### (1) OS Command Injection (low)
 ```bash
 ; cat /etc/passwd

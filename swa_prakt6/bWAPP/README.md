@@ -6,7 +6,9 @@
 ```
 
 ### OS Command Injection-Blind (low)
-
+```bash
+$
+```
 
 ### Cross-Site Scripting -Reflected(*) (low)
 

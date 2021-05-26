@@ -32,3 +32,24 @@ Dazu benötigen wir die File-Extension hochzuladenden datei. Diese erhalten wir 
 $info = new SplFileInfo($_FILES["dispic"]["name"]);
 $ext = $info->getExtension();
 ```
+Jetzt müssen wir prüfen, ob es sich um ein zulässiges Datei-Format (.jpg oder .png) handelt.
+Hierzu erzeugen wir ein array mit den erlaubten extensions:
+```php
+$allowed_ext = array("jpg", "jpeg", "png");
+```
+Anschließend prüfen wir, ob wir unsere extension im array wiederfinden:
+```php
+if (!in_array($ext, $allowed_ext) || $_FILES["dispic"]["size"] > $maxSize) {
+        echo 'Error';
+      } else {
+        $dest_dir = "uploads/";
+        $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
+        $src = $_FILES["dispic"]["tmp_name"];
+        if (move_uploaded_file($src, $dest)) {
+          $_SESSION["dispic_url"] = $dest;
+          chmod($dest, 0644);
+          echo 'Success';
+        }
+      }
+}
+```

@@ -1,7 +1,9 @@
 # bWAPP - Exploits
 
 ### (1) OS Command Injection (low)
-<a href="./exploits/01.py">Exploit</a>
+```bash
+; cat /etc/passwd
+```
 
 ### (2) OS Command Injection-Blind (low)
 ```bash

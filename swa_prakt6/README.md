@@ -1,6 +1,6 @@
 # SWA - Praktikum 6
 
-><a href="https://p6.swa-toaster.de/">:wave: Hier gehts zum Server</a><br>
+><a href="https://p6.swa-toaster.de/">:link: zum Server</a><br>
 ><a href="./bWAPP">:page_facing_up: bWAPP - write-up</a><br>
 ><a href="./xss-game">:page_facing_up: XSS-Game - write-up</a><br>
 

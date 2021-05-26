@@ -45,6 +45,7 @@ if (!in_array($ext, $allowed_ext)) {
   # Speichere Datei auf Server
 }
 ```
+><i><b>Great success!</b></i>
 #### (3) Generate Unique Filenames On Server
 Um zu verhindern, das mehrere Benutzer eine valide Datei mit gleichem Namen hochladen und so die gleichnamige Datei eines anderen Benutzers auf dem Server überschreiben, müssen wir einzigartige Dateinamen erzeugen:
 ```php
@@ -52,3 +53,4 @@ $dest_dir = "uploads/";
 $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
 # bsp. "38323939333436343636306164393031346534386335332e3533303034393337.png"
 ```
+><i><b>Great success!</b></i>

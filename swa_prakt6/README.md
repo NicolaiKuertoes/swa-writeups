@@ -3,7 +3,7 @@
 <a href="./bWAPP">:page_facing_up: bWAPP - write-up</a><br>
 <a href="./xss-game">:page_facing_up: XSS-Game - write-up</a><br>
 
-## File-Upload (OTC)
+## File-Upload (SWA Social Network)
 ### Analyse (most obvious)
 <a href="https://p6.swa-toaster.de/">:link: zum OTC Server</a><br>
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>

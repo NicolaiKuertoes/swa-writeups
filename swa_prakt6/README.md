@@ -64,28 +64,28 @@ Jetzt prüfen wir einfach zusätzlich zur File-Extension, ob die Datei eine zul�
 Alle Fixes zusammen:
 ```php
 # restrict filesize to max 200kB
-  $maxSize = 200000;
-  # restrict file-upload to .jpg and .png files
-  $allowed_ext = array("jpg", "jpeg", "png");
-  # getting extension of file to upload
-  $info = new SplFileInfo($_FILES["dispic"]["name"]);
-  $ext = $info->getExtension();
-  # check if file exists for uploading
-  if ($ext != "") {
-    # check if file is allowed and max-filesize is not exceeded
-    if (!in_array($ext, $allowed_ext) || $_FILES["dispic"]["size"] > $maxSize) {
-      echo 'File not allowed or too big.';
-    } else {
-      $dest_dir = "uploads/";
-      # generate unique filename
-      $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
-      $src = $_FILES["dispic"]["tmp_name"];
-      # upload file to server
-      if (move_uploaded_file($src, $dest)) {
-        # save path to just ubloaded file to session variable
-        $_SESSION["dispic_url"] = $dest;
-        chmod($dest, 0644);
-        echo 'Success. File uploaded.';
-      }
-  }
+$maxSize = 200000;
+# restrict file-upload to .jpg and .png files
+$allowed_ext = array("jpg", "jpeg", "png");
+# getting extension of file to upload
+$info = new SplFileInfo($_FILES["dispic"]["name"]);
+$ext = $info->getExtension();
+# check if file exists for uploading
+if ($ext != "") {
+  # check if file is allowed and max-filesize is not exceeded
+  if (!in_array($ext, $allowed_ext) || $_FILES["dispic"]["size"] > $maxSize) {
+    echo 'File not allowed or too big.';
+  } else {
+    $dest_dir = "uploads/";
+    # generate unique filename
+    $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
+    $src = $_FILES["dispic"]["tmp_name"];
+    # upload file to server
+    if (move_uploaded_file($src, $dest)) {
+      # save path to just ubloaded file to session variable
+      $_SESSION["dispic_url"] = $dest;
+      chmod($dest, 0644);
+      echo 'Success. File uploaded.';
+    }
+}
 ```

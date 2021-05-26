@@ -50,4 +50,5 @@ Um zu verhindern, das mehrere Benutzer eine valide Datei mit gleichem Namen hoch
 ```php
 $dest_dir = "uploads/";
 $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
+# bsp. "38323939333436343636306164393031346534386335332e3533303034393337.png"
 ```

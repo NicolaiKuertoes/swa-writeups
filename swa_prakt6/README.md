@@ -3,6 +3,7 @@
 ><a href="https://p6.swa-toaster.de/">:link: zum OTC Server</a><br>
 ><a href="./bWAPP">:page_facing_up: bWAPP - write-up</a><br>
 ><a href="./xss-game">:page_facing_up: XSS-Game - write-up</a><br>
+<hr>
 
 ### Analyse (most obvious)
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>

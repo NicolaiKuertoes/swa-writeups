@@ -70,18 +70,22 @@ Alle Fixes zusammen:
   # getting extension of file to upload
   $info = new SplFileInfo($_FILES["dispic"]["name"]);
   $ext = $info->getExtension();
-  # check if file extension is allowed
+  # check if file exists for uploading
   if ($ext != "") {
+    # check if file is allowed and max-filesize is not exceeded
     if (!in_array($ext, $allowed_ext) || $_FILES["dispic"]["size"] > $maxSize) {
-      echo '<div class="container alert alert-danger alert-dismissible fade show" role="alert" style="position:absolute; top: 1rem;">Oops, something went wrong. Please try uploading a valid JPG- or PNG-File (200kB max.).<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+      echo 'File not allowed or too big.';
     } else {
       $dest_dir = "uploads/";
+      # generate unique filename
       $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
       $src = $_FILES["dispic"]["tmp_name"];
+      # upload file to server
       if (move_uploaded_file($src, $dest)) {
+        # save path to just ubloaded file to session variable
         $_SESSION["dispic_url"] = $dest;
         chmod($dest, 0644);
-        echo '<div class="container alert alert-success alert-dismissible fade show" role="alert" style="position:absolute; top: 1rem;">Successfully uploaded your profile picture.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        echo 'Success. File uploaded.';
       }
   }
 ``

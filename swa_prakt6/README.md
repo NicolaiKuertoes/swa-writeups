@@ -16,7 +16,7 @@ Der Angreifer navigiert nun einfach über die URL in das <b><i>uploads</i></b> V
 
 ### Fixes
 #### (1) Prevent Directory Listing
-Hier möchte ich zunächst das <i>Directory Listing</i> verhindern. Dies lässt sich ganz einfach mit einer leeren index.html oder index.php Datei im gewünschten Verzeichnis umsetzen. Der Server hält nach besagten index-Dateien ausschau und zeigt diese automatisch an. Um den Zugang zum <b>uploads</b> Ordner garnicht erst zu ermöglichen, kann man auch eine automatische Weiterleitung programmieren.
+Hier möchten wir zunächst das <i>Directory Listing</i> verhindern. Dies lässt sich ganz einfach mit einer leeren index.html oder index.php Datei im gewünschten Verzeichnis umsetzen. Der Server hält nach besagten index-Dateien ausschau und zeigt diese automatisch an. Um den Zugang zum <b>uploads</b> Ordner garnicht erst zu ermöglichen, kann man auch eine automatische Weiterleitung programmieren.
 Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
 ```PHP
 <?php
@@ -26,3 +26,9 @@ Dazu schreibe ich folgenden Code in die <i>/uploads/<b>index.php</b></i>:
 Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.<br>
 ><i><b>Great success!</b></i>
 #### (2) Prevent Arbitrary File-Upload
+Nun möchten wir dafür Sorge tragen, dass nur Dateien mit der Endung .jpg oder .png hochgeladen werden dürfen.
+Dazu benötigen wir die File-Extension hochzuladenden datei. Diese erhalten wir mit:
+```php
+$info = new SplFileInfo($_FILES["dispic"]["name"]);
+$ext = $info->getExtension();
+```

@@ -88,4 +88,4 @@ Alle Fixes zusammen:
         echo 'Success. File uploaded.';
       }
   }
-``
+```

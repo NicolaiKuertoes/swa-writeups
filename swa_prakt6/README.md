@@ -1,6 +1,8 @@
 # SWA - Praktikum 6
 
 ><a href="https://p6.swa-toaster.de/">:wave: Hier gehts zum Server</a>
+><a href="./bWAPP">:wave: bWAPP - write-up</a>
+><a href="./xss-game">:wave: XSS-Game - write-up</a>
 
 ### Analyse (most obvious)
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>

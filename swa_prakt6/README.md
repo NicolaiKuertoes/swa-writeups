@@ -60,3 +60,28 @@ Um ein "zumüllen" des Servers durch zuviele Uploads zu großer Dateien zu verhi
 # 200kB
 $maxSize = 200000;
 ```
+Jetzt prüfen wir einfach zusätzlich zur File-Extension, ob die Datei eine zulässige größe nicht überschreitet.<br>
+Alle Fixes zusammen:
+```php
+# restrict filesize to max 200kB
+  $maxSize = 200000;
+  # restrict file-upload to .jpg and .png files
+  $allowed_ext = array("jpg", "jpeg", "png");
+  # getting extension of file to upload
+  $info = new SplFileInfo($_FILES["dispic"]["name"]);
+  $ext = $info->getExtension();
+  # check if file extension is allowed
+  if ($ext != "") {
+    if (!in_array($ext, $allowed_ext) || $_FILES["dispic"]["size"] > $maxSize) {
+      echo '<div class="container alert alert-danger alert-dismissible fade show" role="alert" style="position:absolute; top: 1rem;">Oops, something went wrong. Please try uploading a valid JPG- or PNG-File (200kB max.).<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    } else {
+      $dest_dir = "uploads/";
+      $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
+      $src = $_FILES["dispic"]["tmp_name"];
+      if (move_uploaded_file($src, $dest)) {
+        $_SESSION["dispic_url"] = $dest;
+        chmod($dest, 0644);
+        echo '<div class="container alert alert-success alert-dismissible fade show" role="alert" style="position:absolute; top: 1rem;">Successfully uploaded your profile picture.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+      }
+  }
+``

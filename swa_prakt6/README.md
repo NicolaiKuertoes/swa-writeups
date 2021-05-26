@@ -45,4 +45,9 @@ if (!in_array($ext, $allowed_ext)) {
   # Speichere Datei auf Server
 }
 ```
-#### (3) Bonus (Limit Filesize)
+#### (4) Generate Unique Filenames On Server
+Um zu verhindern, das mehrere Benutzer eine valide Datei mit gleichem Namen hochladen und so die gleichnamige Datei eines anderen Benutzers auf dem Server überschreiben, müssen wir einzigartige Dateinamen erzeugen:
+```php
+$dest_dir = "uploads/";
+$dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
+```

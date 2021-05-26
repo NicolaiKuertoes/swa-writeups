@@ -1,16 +1,11 @@
 # bWAPP - Exploits
 
-### OS Command Injection (low)
-```bash
-; cat /etc/passwd
-```
+### (1) OS Command Injection (low)
+<a href="./exploits/01.py">Exploit</a>
 
-### OS Command Injection-Blind (low)
+### (2) OS Command Injection-Blind (low)
 ```bash
 $
 ```
 
-### Cross-Site Scripting -Reflected(*) (low)
-
-
-### Cross-Site Scripting -Stored(*) (low)
+### (3) Cross-Site Scripting - Reflected (GET) (low)

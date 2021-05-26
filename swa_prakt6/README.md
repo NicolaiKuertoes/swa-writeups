@@ -40,7 +40,7 @@ $allowed_ext = array("jpg", "jpeg", "png");
 Anschließend prüfen wir, ob wir unsere extension im array wiederfinden:
 ```php
 if (!in_array($ext, $allowed_ext)) {
-        echo 'Error';
+        echo 'File not allowed.';
       } else {
         # Speichere Datei auf Server
       }

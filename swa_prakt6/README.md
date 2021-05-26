@@ -45,4 +45,4 @@ if (!in_array($ext, $allowed_ext)) {
   # Speichere Datei auf Server
 }
 ```
-#### Bonus (Limit Filesize)
+#### (3) Bonus (Limit Filesize)

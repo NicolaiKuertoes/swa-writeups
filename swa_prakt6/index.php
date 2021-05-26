@@ -31,7 +31,7 @@
 # ---------------------------------- END FIX ----------------------------------
   }
 
-  $url = "./uploads/default.png";
+  $url = "./default.png";
   if (isset($_SESSION["dispic_url"])) {
     $url = $_SESSION["dispic_url"];
   }

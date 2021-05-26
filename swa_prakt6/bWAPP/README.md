@@ -20,7 +20,7 @@ $
 "?firstname=Hacker&lastname=<script>alert%28"XSS"%29<%2Fscript>&form=submit"
 ```
 
-### (3) Cross-Site Scripting - Reflected (POST) (low)
+### (4) Cross-Site Scripting - Reflected (POST) (low)
 ```JS
 // Input 1:
 "Hacker"

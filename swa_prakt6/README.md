@@ -97,5 +97,5 @@ if ($ext != "") {
 ><i><b><a href="https://github.com/NicolaiKuertoes/swa-writeups/blob/master/swa_prakt6/index.php">:link: complete index.php</a></b></i>
 ### Fazit
 Mit diesen 15 Zeilen Code haben wir eine schwerwiegende Sicherheitslücke geschlossen.<br>
-Bei diesen Fixes handelt es sich um sehr einfache lösungen, mit welchen man sicher keinen Preis gewinnt. Dennoch haben wir es Angreifern erheblich schwerer gemacht, den Server über dieses File-Upload zu übernehmen.
+Bei diesen Fixes handelt es sich um sehr einfache lösungen, mit welchen man sicher keinen Preis gewinnt. Dennoch haben wir es Angreifern erheblich schwerer gemacht, den Server über diesen File-Upload zu übernehmen.
 <p>&copy Nicolai Kuertoes :space_invader:</p>

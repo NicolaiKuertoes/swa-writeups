@@ -1,6 +1,6 @@
 # SWA - Praktikum 6
 
-> https://p6.swa-toaster.de/
+<a href="https://p6.swa-toaster.de/">Hier gehts zum Server</a>
 
 ### Analyse (most obvious)
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>

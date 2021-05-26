@@ -54,3 +54,9 @@ $dest = $dest_dir . bin2hex(uniqid(rand(), true)) . '.' . $ext;
 # bsp. "38323939333436343636306164393031346534386335332e3533303034393337.png"
 ```
 ><i><b>Great success!</b></i>
+#### (4) Bonus (Limit Filesize)
+Um ein "zumüllen" des Servers durch zuviele Uploads zu großer Dateien zu verhindern, können wir die Dateigröße der hochzuladenen Datei auf ein gewünschtes Maximum beschränken. Für ein Profilbild genügen 200kB.
+```php
+# 200kB
+$maxSize = 200000;
+```

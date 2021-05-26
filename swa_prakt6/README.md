@@ -1,5 +1,5 @@
 # SWA - Praktikum 6
-### Table of Contents
+### Write-Ups
 <a href="./bWAPP">:page_facing_up: bWAPP - write-up</a><br>
 <a href="./xss-game">:page_facing_up: XSS-Game - write-up</a><br>
 

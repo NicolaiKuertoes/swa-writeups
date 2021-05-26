@@ -6,7 +6,7 @@
 ```
 
 ### (2) OS Command Injection-Blind (low)
-```bash
+```
 need a callback?!
 ```
 

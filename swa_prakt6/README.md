@@ -92,3 +92,4 @@ if ($ext != "") {
 ### Fazit
 Mit diesen 15 Zeilen Code haben wir eine schwerwiegende Sicherheitslücke geschlossen.<br>
 Bei diesen Fixes handelt es sich um sehr einfache lösungen, mit welchen man sicher keinen Preis gewinnt. Dennoch haben wir es Angreifern erheblich schwerer gemacht, den Server über dieses File-Upload zu übernehmen.
+<p>&copy Nicolai Kuertoes</p>

@@ -1,6 +1,6 @@
 # SWA - Praktikum 6
 ### Write-Ups
-<a href="./bWAPP">:page_facing_up: bWAPP - write-up</a><br>
+<a href="https://github.com/NicolaiKuertoes/swa-writeups/tree/master/swa_prakt6/xss-game#xss-game-by-google">:page_facing_up: bWAPP - write-up</a><br>
 <a href="./xss-game">:page_facing_up: XSS-Game - write-up</a><br>
 
 ## File-Upload (<a href="https://p6.swa-toaster.de/">SWA Social Network</a>)

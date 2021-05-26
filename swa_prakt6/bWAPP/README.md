@@ -7,7 +7,7 @@
 
 ### (2) OS Command Injection-Blind (low)
 ```bash
-not yet implemented
+need a callback?!
 ```
 
 ### (3) Cross-Site Scripting - Reflected (GET) (low)

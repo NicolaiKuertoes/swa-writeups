@@ -32,7 +32,7 @@ Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man autom
 ><i><b>Great success!</b></i>
 #### (2) Prevent Arbitrary File-Upload
 Nun möchten wir dafür Sorge tragen, dass nur Dateien mit der Endung .jpg oder .png hochgeladen werden dürfen.
-Dazu benötigen wir die File-Extension hochzuladenden datei. Diese erhalten wir mit:
+Dazu benötigen wir die File-Extension der hochzuladenden Datei. Diese erhalten wir mit:
 ```php
 $info = new SplFileInfo($_FILES["dispic"]["name"]);
 $ext = $info->getExtension();

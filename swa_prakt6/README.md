@@ -3,11 +3,11 @@
 <a href="https://github.com/NicolaiKuertoes/swa-writeups/tree/master/swa_prakt6/bWAPP#bwapp---exploits">:page_facing_up: bWAPP - write-up</a><br>
 <a href="https://github.com/NicolaiKuertoes/swa-writeups/tree/master/swa_prakt6/xss-game#xss-game-by-google">:page_facing_up: XSS-Game - write-up</a><br>
 
-## File-Upload (<a href="https://p6.swa-toaster.de/">SWA Social Network</a>)
+## File-Upload (<a href="https://file-upload.swa-toaster.de/">SWA Social Network</a>)
 ### Analyse (most obvious)
-<a href="https://p6.swa-toaster.de/">:link: zum OTC Server</a><br>
+<a href="https://file-upload.swa-toaster.de/">:link: zum OTC Server</a><br>
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>
-Navigiert man über die URL "https://p6.swa-toaster.de/uploads" in dieses Verzeichnis, so wird dessen Inhalt sichtbar aufgelistet. Dies ist bekannt als <i>Directory Listing</i>. (Angreifer können so auch hochgeladene Inhalte von anderen Usern ausspähen.) Lädt ein angreifer ein böswilliges PHP-Skript hoch, wird es automatisch ausgeführt. Er kann es auch manuell ausführen, indem er es einfach über die URL "https://p6.swa-toaster.de/uploads/evil.php" aufruft. Angreifer haben so die volle Kontrolle über den Server.<br>
+Navigiert man über die URL "https://file-upload.swa-toaster.de/" in dieses Verzeichnis, so wird dessen Inhalt sichtbar aufgelistet. Dies ist bekannt als <i>Directory Listing</i>. (Angreifer können so auch hochgeladene Inhalte von anderen Usern ausspähen.) Lädt ein angreifer ein böswilliges PHP-Skript hoch, wird es automatisch ausgeführt. Er kann es auch manuell ausführen, indem er es einfach über die URL "https://file-upload.swa-toaster.de/uploads/evil.php" aufruft. Angreifer haben so die volle Kontrolle über den Server.<br>
 
 ### Exploit (simple)
 Ein symbolischer exploit sähe wie folgt aus:
@@ -26,7 +26,7 @@ Dazu schreiben wir folgenden Code in die <i>/uploads/<b>index.php</b></i>:
 ```php
 <?php
   # /uploads/index.php
-  header("Location: https://p6.swa-toaster.de/");
+  header("Location: https://file-upload.swa-toaster.de/");
 ```
 Navigiert man über die URL in das <b>uploads</b> Verzeichnis, so wird man automatisch zurück zur Startseite geleitet.<br>
 ><i><b>Great success!</b></i>

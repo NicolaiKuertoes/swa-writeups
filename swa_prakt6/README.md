@@ -5,7 +5,7 @@
 
 ## File-Upload (<a href="https://file-upload.swa-toaster.de/">SWA Social Network</a>)
 ### Analyse (most obvious)
-<a href="https://file-upload.swa-toaster.de/">:link: zum OTC Server</a><br>
+<a href="https://file-upload.swa-toaster.de/">:link: zum OTC Server</a> (offline)<br>
 Es existiert keine Input-Validierung beim <b>File-Upload</b>. Es lassen sich beliebige Dateien hochladen. Diese landen dann im Verzeichnis <b><i>uploads</i></b>.<br>
 Navigiert man über die URL "https://file-upload.swa-toaster.de/" in dieses Verzeichnis, so wird dessen Inhalt sichtbar aufgelistet. Dies ist bekannt als <i>Directory Listing</i>. (Angreifer können so auch hochgeladene Inhalte von anderen Usern ausspähen.) Lädt ein angreifer ein böswilliges PHP-Skript hoch, wird es automatisch ausgeführt. Er kann es auch manuell ausführen, indem er es einfach über die URL "https://file-upload.swa-toaster.de/uploads/evil.php" aufruft. Angreifer haben so die volle Kontrolle über den Server.<br>
 
